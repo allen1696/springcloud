@@ -1,0 +1,24 @@
+server:
+  port: 8081
+
+#47.98.57.87
+spring:
+  application:
+    #  服务名称
+    name: order-consumer
+  profiles:
+    #  配置文件选择
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.98.57.87:8848
+      config:
+        #服务器地址
+        server-addr: 47.98.57.87:8848
+
+        #引入依赖spring-cloud-starter-bootstrap加载优先级高于application.properties?
+        #
+        prefix: nacos-config #配置文件前缀名
+        file-extension: properties # 配置文件后缀名
+        group: DEFAULT_GROUP

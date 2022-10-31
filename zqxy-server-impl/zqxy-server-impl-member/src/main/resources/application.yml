@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+#  spring.application.name=nacos-provider
+#  spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848
+#  management.endpoints.web.exposure.include=*
+#47.98.57.87
+spring:
+  application:
+    #  服务名称
+    name: member-producer
+  profiles:
+    #  配置文件选择
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.98.57.87:8848
+      config:
+        #服务器地址
+        server-addr: 47.98.57.87:8848
+        # 配置文件格式
+        file-extension: yml
