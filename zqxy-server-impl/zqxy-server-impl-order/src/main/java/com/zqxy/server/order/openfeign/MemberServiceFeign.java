@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @FeignClient("member-producer")
 public interface MemberServiceFeign{
+//   TODO 如果请求参数没有加注解，默认采用post请求
+
     @GetMapping("/getuser")
     String getUser(@RequestParam("userid")Integer userid);
 }
